@@ -34,15 +34,27 @@
             </div>
         </div>
 
-        <div class="upload-container">
-            <label for="audio-file">Или загрузите аудиофайл:</label>
-            <input type="file" id="audio-file" accept="audio/*">
-            <button id="upload-btn" class="audio-btn">
-                <i class="fas fa-upload"></i> Загрузить
-            </button>
-        </div>
+<div class="upload-container">
+    <label for="audio-file" class="upload-label">Или загрузите аудиофайл:</label>
+    <div class="file-upload">
+        <label for="audio-file" class="custom-file-upload">
+            <i class="fas fa-file-audio"></i> Выбрать файл
+        </label>
+        <input type="file" id="audio-file" accept="audio/*">
+                <span id="file-name" class="file-name">Файл не выбран</span>
+        <button id="upload-btn" class="audio-btn">
+            <i class="fas fa-upload"></i> Загрузить
+        </button>
     </div>
+</div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
+
+<script>
+        document.getElementById('audio-file').addEventListener('change', function() {
+        const fileName = this.files[0] ? this.files[0].name : 'Файл не выбран';
+        document.getElementById('file-name').textContent = fileName;
+    });
+</script>

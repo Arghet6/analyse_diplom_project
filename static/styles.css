@@ -146,3 +146,24 @@ body {
 .file-upload input[type="file"] {
     flex: 1;
 }
+
+/* Красивая кнопка выбора файла */
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 16px;
+    background: linear-gradient(90deg, #4a4ae8, #3b3b98);
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.custom-file-upload:hover {
+    background: linear-gradient(90deg, #5a5aff, #4b4bb8);
+}
+
+/* Скрытие стандартного инпута */
+input[type="file"] {
+    display: none;
+}

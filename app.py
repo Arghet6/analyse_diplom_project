@@ -8,6 +8,8 @@ import io
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 from transformers import AutoModelForAudioClassification, AutoFeatureExtractor
 
+
+
 app = Flask(__name__)
 
 # Обновлённый словарь эмоций с surprise
